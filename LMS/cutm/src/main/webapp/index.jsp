@@ -28,7 +28,7 @@
 <div class="button-container">
     <h1>Welcome to the Library Management System</h1>
     <a href="login.jsp" class="btn btn-primary">Login</a>
-    <a href="signup.jsp" class="btn btn-secondary">Sign Up</a>
+    ,<!--  <a href="signup.jsp" class="btn btn-secondary">Sign Up</a>--><!-- here i the signup button is not requred because we add it by Admin,and the user log in by emailid & password -->
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

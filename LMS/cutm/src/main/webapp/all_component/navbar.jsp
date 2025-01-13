@@ -19,17 +19,17 @@
             </li>
 
             <!-- Admin Links -->
-            <c:if test="${userobj.role eq 'admin'}">
+            <!-- <c:if test="${userobj.role eq 'admin'}">
                 <li class="nav-item"><a class="nav-link" href="add_job.jsp"><i class="fas fa-plus-circle"></i> Post Job</a></li>
                 <li class="nav-item"><a class="nav-link" href="view_job.jsp"><i class="fas fa-eye"></i> View Jobs</a></li>
                 <li class="nav-item"><a class="nav-link" href="admin_applications.jsp"><i class="fas fa-clipboard-list"></i> Applications</a></li>
             </c:if>
 
             <!-- User Links -->
-            <c:if test="${userobj.role eq 'user'}">
+		<!--             <c:if test="${userobj.role eq 'user'}">
                 <li class="nav-item"><a class="nav-link" href="home.jsp"><i class="fas fa-search"></i> Job Listings</a></li>
                 <li class="nav-item"><a class="nav-link" href="my_applications.jsp"><i class="fas fa-clipboard-list"></i> My Applications</a></li>
-            </c:if>
+            </c:if> -->
         </ul>
 
         <!-- User Profile and Auth Buttons -->
@@ -45,7 +45,7 @@
             <!-- Login and Signup for Guests -->
             <c:if test="${empty userobj}">
                 <a href="login.jsp" class="nav-link btn btn-outline-dark mx-2"><i class="fas fa-sign-in-alt"></i> Login</a>
-                <a href="signup.jsp" class="nav-link btn btn-light mx-2"><i class="fas fa-user-plus"></i> Signup</a>
+              <!--   <a href="signup.jsp" class="nav-link btn btn-light mx-2"><i class="fas fa-user-plus"></i> Signup</a> here this is not needed -->
             </c:if>
         </div>
     </div>
@@ -72,7 +72,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <a href="edit_profile.jsp" class="btn btn-primary">Edit Profile</a>
+                    <!-- <a href="edit_profile.jsp" class="btn btn-primary">Edit Profile</a> here this is not needed -->
                 </div>
             </div>
         </div>

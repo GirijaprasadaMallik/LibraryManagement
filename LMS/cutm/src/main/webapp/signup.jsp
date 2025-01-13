@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>SignUp Page</title>
+<title>Add User</title>
 <%@include file="all_component/all_css.jsp"%>
 <style type="text/css">
 
@@ -32,7 +32,7 @@
 					<div class="card-body">
 						<div class="text-center">
 							<i class="fa fa-user-plus fa-2x" aria-hidden="true"></i>
-							<h5>Registration</h5>
+							<h5>Add User</h5>
 						</div>
 						
 						<c:if test="${not empty succMsg }">
