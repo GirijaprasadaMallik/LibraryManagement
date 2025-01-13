@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import db.DBConnect;
+import com.db.DBConnect;
 import com.dao.UserDAO;
 import com.entity.User;
 
@@ -25,7 +25,7 @@ public class Loginservlet extends HttpServlet {
 			User u=new User();
 			HttpSession session=req.getSession();
 
-			if ("admin@gmail.com".equals(em) && "admin@123".equals(ps)) {
+			if ("lms@gmail.com".equals(em) && "admin@123".equals(ps)) {
 				session.setAttribute("userobj",u);
 				u.setRole("admin");
 				resp.sendRedirect("admin.jsp");

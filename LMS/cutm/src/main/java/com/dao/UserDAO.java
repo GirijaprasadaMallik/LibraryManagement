@@ -22,7 +22,7 @@ public class UserDAO {
     public boolean addUser(User u) {
         boolean f = false;
         try {
-            String sql = "INSERT INTO user(name, qualification, email, password, role) VALUES (?,?,?,?,?)";
+            String sql = "INSERT INTO user(name,email, password, role) VALUES (?,?,?,?)";
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setString(1, u.getName());
             ps.setString(2, u.getEmail());
@@ -67,7 +67,7 @@ public class UserDAO {
     public boolean updateUser(User u) {
         boolean f = false;
         try {
-            String sql = "UPDATE user SET name=?, qualification=?, email=?, password=? WHERE id=?";
+            String sql = "UPDATE user SET name=?, email=?, password=? WHERE id=?";
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setString(1, u.getName());
             ps.setString(2, u.getEmail());
@@ -362,7 +362,7 @@ public class UserDAO {
     // Validate user credentials
     public boolean validateCredentials(String email, String password) {
         boolean isValid = false;
-        try {
+        try {	
             String sql = "SELECT * FROM user WHERE email=? AND password=? AND is_active=true";
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setString(1, email);
